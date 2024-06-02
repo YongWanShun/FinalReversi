@@ -27,17 +27,17 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(14, 77);
+            panel1.Location = new Point(12, 81);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(735, 719);
+            panel1.Size = new Size(642, 642);
             panel1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(744, 205);
+            label1.Location = new Point(661, 216);
             label1.Name = "label1";
             label1.Size = new Size(76, 31);
             label1.TabIndex = 1;
@@ -46,9 +46,9 @@
             // Back
             // 
             Back.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Back.Location = new Point(14, 12);
+            Back.Location = new Point(12, 13);
             Back.Name = "Back";
-            Back.Size = new Size(130, 47);
+            Back.Size = new Size(116, 49);
             Back.TabIndex = 2;
             Back.Text = "返回";
             Back.UseVisualStyleBackColor = true;
@@ -56,7 +56,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(744, 77);
+            pictureBox1.Location = new Point(661, 81);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(125, 125);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -66,19 +66,20 @@
             // button1
             // 
             button1.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(522, 13);
+            button1.Location = new Point(540, 14);
             button1.Name = "button1";
-            button1.Size = new Size(130, 47);
+            button1.Size = new Size(116, 49);
             button1.TabIndex = 4;
-            button1.Text = "重置";
+            button1.Text = "翻桌";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 19F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(938, 808);
             ControlBox = false;
             Controls.Add(button1);

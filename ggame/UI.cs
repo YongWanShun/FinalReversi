@@ -16,6 +16,8 @@ namespace ggame
         public UI()
         {
             InitializeComponent();
+            // 設置窗體的邊框樣式為固定
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
             SetBackgroundImage();
         }
 

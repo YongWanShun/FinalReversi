@@ -27,6 +27,7 @@ namespace ggame
             UpdateStatus();
             // 設置窗體的邊框樣式為固定
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            SetBackgroundImage();//設置背景圖片
         }
 
         // 初始化棋盘
@@ -193,12 +194,16 @@ namespace ggame
             }
         }
 
-        private void EndGame()
+        private void EndGame()//結束游戲
         {
             DialogResult result = MessageBox.Show(GetScores() + "\n遊戲結束！是否重新開始？", "確認", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 ResetBoard();
+            }
+            else if (result == DialogResult.No)
+            {
+                this.Close();
             }
         }
         // 执行落子操作
@@ -378,9 +383,15 @@ namespace ggame
             this.panel1.Invalidate(); // 重新绘制棋盘
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//翻桌按鈕
         {
             ResetBoard();
+        }
+        private void SetBackgroundImage()
+        {
+            // 确保你的项目资源中有一张名为 background.jpg 的图片
+            this.BackgroundImage = Properties.Resources.background2;
+            this.BackgroundImageLayout = ImageLayout.Stretch; // 或者使用其他布局方式，例如 Tile, Center, Zoom
         }
     }
 }
