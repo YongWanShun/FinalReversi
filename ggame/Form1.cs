@@ -8,15 +8,18 @@ using System.Windows.Forms;
 
 namespace ggame
 {
-    public partial class Form1 : Form     
+    public partial class Form1 : Form
     {
-        
+
         private const int GridSize = 8;
         private const int CellSize = 80;
         private int[,] board = new int[GridSize, GridSize]; // 0: 空，1: 黑棋，2: 白棋
         private bool isBlackTurn = true;
         private bool isSinglePlayer = true; // 标识是否是单人模式
-        private enum Difficulty { Easy, Normal, Hard }
+        private enum Difficulty
+        {
+            Easy, Normal, Hard
+        }
         private Difficulty currentDifficulty = Difficulty.Easy; // 当前难度
         private Point? lastMove = null;
 
@@ -228,7 +231,8 @@ namespace ggame
             {
                 for (int dy = -1; dy <= 1; dy++)
                 {
-                    if (dx == 0 && dy == 0) continue;
+                    if (dx == 0 && dy == 0)
+                        continue;
 
                     int nx = x + dx, ny = y + dy;
                     bool hasOpponentBetween = false;
@@ -259,7 +263,8 @@ namespace ggame
             {
                 for (int dy = -1; dy <= 1; dy++)
                 {
-                    if (dx == 0 && dy == 0) continue;
+                    if (dx == 0 && dy == 0)
+                        continue;
 
                     int nx = x + dx, ny = y + dy;
                     bool hasOpponentBetween = false;
@@ -395,6 +400,11 @@ namespace ggame
             // 确保你的项目资源中有一张名为 background.jpg 的图片
             this.BackgroundImage = Properties.Resources.background2;
             this.BackgroundImageLayout = ImageLayout.Stretch; // 或者使用其他布局方式，例如 Tile, Center, Zoom
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
